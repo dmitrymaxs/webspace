@@ -38,7 +38,7 @@
                 Загружайте видео и <span class="gradient-text">плейлисты</span> мгновенно
             </h1>
             <p class="text-xl text-slate-400 mb-10">
-                Удобная программа с графическим интерфейсом для Windows. Всё необходимое уже встроено в один файл.
+                Удобная программа с графическим интерфейсом для загрузки контента с YouTube. Всё необходимое уже включено в один файл.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="https://sourceforge.net/projects/ytdowloader/files/ytdl_v.1.1.4.3.exe/download" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition flex items-center gap-2 shadow-lg shadow-blue-500/20">
@@ -59,38 +59,39 @@
                 <div class="glass p-8 rounded-2xl feature-card border border-transparent">
                     <div class="text-blue-500 text-3xl mb-4"><i class="fas fa-list-ul"></i></div>
                     <h3 class="text-xl font-bold mb-2">Загрузка плейлистов</h3>
-                    <p class="text-slate-400 text-sm">Вставляйте ссылку на плейлист в то же поле, что и для одиночных видео. Программа обработает список автоматически.</p>
+                    <p class="text-slate-400 text-sm">Добавляйте ссылки на плейлисты в то же поле, где и одиночные видео. Программа автоматически скачает все ролики в выбранную папку.</p>
                 </div>
                 <div class="glass p-8 rounded-2xl feature-card border border-transparent">
                     <div class="text-purple-500 text-3xl mb-4"><i class="fas fa-file-audio"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Мультиформатность</h3>
-                    <p class="text-slate-400 text-sm">Поддержка MP3, M4A, OGG и других форматов благодаря встроенному ядру FFmpeg.</p>
+                    <h3 class="text-xl font-bold mb-2">Конвертация аудио</h3>
+                    <p class="text-slate-400 text-sm">Поддержка форматов MP3, M4A, OGG и других. Встроенный постпроцессор обеспечивает высокое качество звука.</p>
                 </div>
                 <div class="glass p-8 rounded-2xl feature-card border border-transparent">
-                    <div class="text-green-500 text-3xl mb-4"><i class="fas fa-info-circle"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Подсказки и логи</h3>
-                    <p class="text-slate-400 text-sm">Интуитивный интерфейс с всплывающими подсказками к кнопкам и детальным журналом загрузки.</p>
+                    <div class="text-green-500 text-3xl mb-4"><i class="fas fa-mouse-pointer"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Простота управления</h3>
+                    <p class="text-slate-400 text-sm">Интуитивно понятный интерфейс с всплывающими подсказками к кнопкам и наглядным журналом логов.</p>
                 </div>
             </div>
         </section>
 
         <section id="tech" class="py-12 bg-slate-800/30 rounded-3xl px-8">
-            <h2 class="text-3xl font-bold mb-8 italic text-center">🛠 Что внутри?</h2>
+            <h2 class="text-3xl font-bold mb-8 italic text-center">🛠 Техническое обновление</h2>
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="space-y-4">
-                    <h4 class="text-blue-400 font-bold uppercase tracking-widest text-sm">Обновленные компоненты:</h4>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Ядро yt-dlp v2025.09.26</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Встроенный FFmpeg 8.0 (авто-настройка)</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Поддержка расширенного списка сайтов</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Звуковые уведомления о завершении</li>
+                    <h4 class="text-blue-400 font-bold uppercase tracking-widest text-sm">Что нового:</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Обновление до yt-dlp 2025.09.26</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Встроенная поддержка FFmpeg 8.0</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Улучшенная поддержка дополнительных видеоплатформ</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Автоматическая настройка путей при запуске</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Звуковые уведомления через системный динамик</li>
                     </ul>
                 </div>
-                <div class="glass p-6 rounded-xl flex items-center">
+                <div class="glass p-6 rounded-xl flex items-center border-l-4 border-blue-500">
                     <div>
-                        <h4 class="text-blue-400 font-bold mb-4 uppercase text-sm">Преимущество Standalone:</h4>
+                        <h4 class="text-blue-400 font-bold mb-2 uppercase text-xs">Информация о файле</h4>
                         <p class="text-sm text-slate-300">
-                            Программа поставляется в виде одного EXE-файла. Она не требует установки Python, FFmpeg или каких-либо библиотек. Всё необходимое для работы включено в размер файла.
+                            Большой размер исполняемого файла обусловлен тем, что в него включены все необходимые зависимости. Программа работает сразу после скачивания на любой системе Windows без установки стороннего ПО.
                         </p>
                     </div>
                 </div>
@@ -100,34 +101,34 @@
         <section id="install" class="max-w-3xl mx-auto">
             <div class="border-l-4 border-yellow-500 bg-yellow-500/10 p-8 rounded-r-2xl">
                 <h2 class="text-2xl font-bold mb-4 flex items-center gap-3 text-yellow-500">
-                    <i class="fas fa-exclamation-triangle"></i> Запуск в Windows
+                    <i class="fas fa-exclamation-triangle"></i> Первый запуск программы
                 </h2>
                 <p class="mb-4 text-slate-300">
-                    При первом запуске Windows может выдать предупреждение, так как приложение не имеет платной цифровой подписи.
+                    Так как приложение не подписано платной лицензией разработчика, Windows может выдать стандартное предупреждение.
                 </p>
                 <ol class="list-decimal list-inside space-y-2 font-semibold text-white">
-                    <li>В окне предупреждения нажмите <span class="underline text-blue-400 cursor-help">"Подробнее"</span>.</li>
-                    <li>Нажмите появившуюся кнопку <span class="bg-slate-700 px-3 py-1 rounded text-sm">"Выполнить в любом случае"</span>.</li>
+                    <li>В окне фильтра SmartScreen выберите <span class="underline">"Подробнее"</span>.</li>
+                    <li>Нажмите кнопку <span class="bg-slate-700 px-3 py-1 rounded text-sm">"Выполнить в любом случае"</span>.</li>
                 </ol>
                 <div class="mt-6 p-4 bg-slate-900 rounded border border-slate-700 text-sm">
-                    <p class="text-blue-400 mb-2 font-bold italic">Совет:</p>
-                    <p class="text-slate-400">Если на скачанном видео отсутствует звук, рекомендуем установить <a href="https://av1-video-extension.ru.uptodown.com/windows/download" class="text-blue-500 underline hover:text-blue-400">AV1 Video Extension</a>.</p>
+                    <p class="text-blue-400 mb-1 font-bold">Полезный совет:</p>
+                    <p class="text-slate-400">Если в загруженном видео отсутствует звук, рекомендуется доустановить кодек <a href="https://av1-video-extension.ru.uptodown.com/windows/download" class="text-blue-500 underline hover:text-blue-300 transition">AV1 Video Extension</a>.</p>
                 </div>
             </div>
         </section>
 
         <footer class="text-center pt-20 border-t border-slate-800">
-            <h3 class="text-xl font-bold mb-6">Обратная связь</h3>
+            <h3 class="text-xl font-bold mb-6">Обратная связь и поддержка</h3>
             <div class="flex flex-wrap justify-center gap-6 mb-12">
-                <a href="https://t.me/Secret_Archives_Team" class="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-full transition text-white font-medium">
-                    <i class="fab fa-telegram"></i> Написать в Telegram
+                <a href="https://t.me/Secret_Archives_Team" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full transition text-white font-medium shadow-lg shadow-blue-500/10">
+                    <i class="fab fa-telegram"></i> Сообщить об ошибке
                 </a>
                 <a href="https://t.me/tayniearhiv" class="flex items-center gap-2 border border-slate-700 hover:bg-slate-800 px-6 py-3 rounded-full transition">
                     <i class="fas fa-lightbulb text-yellow-500"></i> Канал с обновлениями
                 </a>
             </div>
-            <p class="text-xs text-slate-500 mb-4 italic uppercase tracking-widest">Secret Archives Team</p>
-            <p class="text-sm text-slate-600">© 2026 Secret Archives. Версия v1.1.4.3. Все права защищены.</p>
+            <p class="text-xs text-slate-500 mb-2 uppercase tracking-tighter">Powered by Secret Archives Team</p>
+            <p class="text-sm text-slate-600">© 2026 Secret Archives. Версия v1.1.4.3 (Ветка 1.1.X.X). Сделано для удобства пользователей.</p>
         </footer>
 
     </main>
