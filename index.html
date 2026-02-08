@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YTDownloader v1.1.3.2 — Загрузка видео и аудио с YouTube</title>
+    <title>YTDownloader v1.1.4.3 — Загрузка видео, аудио и плейлистов</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { background-color: #0f172a; color: #e2e8f0; scroll-behavior: smooth; }
         .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
         .gradient-text { background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .feature-card:hover { border-color: #3b82f6; transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
 </head>
 <body class="font-sans">
@@ -17,37 +18,35 @@
     <nav class="sticky top-0 z-50 glass py-4 px-6">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <div class="text-xl font-bold flex items-center gap-2">
-                <span class="text-blue-500 text-2xl">🎥</span> YTDownloader
+                <span class="text-blue-500 text-2xl">🎥</span> YTDownloader <span class="text-xs bg-blue-600 px-2 py-1 rounded ml-2">v1.1.4.3</span>
             </div>
             <div class="hidden md:flex gap-6 text-sm font-medium">
                 <a href="#features" class="hover:text-blue-400 transition">Возможности</a>
-                <a href="#install" class="hover:text-blue-400 transition">Установка</a>
-                <a href="#faq" class="hover:text-blue-400 transition">FAQ</a>
-                <a href="https://sourceforge.net/projects/ytdowloader/" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition">Скачать</a>
+                <a href="#tech" class="hover:text-blue-400 transition">Технологии</a>
+                <a href="#install" class="hover:text-blue-400 transition">Запуск</a>
+                <a href="https://sourceforge.net/projects/ytdowloader/files/ytdl_v.1.1.4.3.exe/download" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition text-white">Скачать</a>
             </div>
         </div>
     </nav>
 
-    <header class="py-20 px-6 text-center">
+    <header class="py-16 px-6 text-center">
         <div class="max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
-                Загружайте с YouTube <span class="gradient-text">в один клик</span>
+            <div class="inline-block px-4 py-1 border border-blue-500/30 rounded-full text-blue-400 text-sm mb-6 bg-blue-500/10">
+                🚀 Новое в v1.1.4.3: Поддержка плейлистов и FFmpeg 8.0
+            </div>
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+                Загружайте видео и <span class="gradient-text">плейлисты</span> мгновенно
             </h1>
             <p class="text-xl text-slate-400 mb-10">
-                Удобная программа с современным графическим интерфейсом для загрузки видео в MP4 и аудио в MP3.
+                Удобная программа с графическим интерфейсом и встроенной поддержкой FFmpeg. Всё необходимое уже внутри[cite: 1, 2].
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://sourceforge.net/projects/ytdowloader/" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition flex items-center gap-2">
-                    <i class="fas fa-download"></i> Скачать v1.1.3.2
+                <a href="https://sourceforge.net/projects/ytdowloader/files/ytdl_v.1.1.4.3.exe/download" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition flex items-center gap-2 shadow-lg shadow-blue-500/20">
+                    <i class="fas fa-download"></i> Скачать v1.1.4.3
                 </a>
-                <a href="#features" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition">
-                    Узнать больше
+                <a href="https://sourceforge.net/projects/ytdowloader/files/" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition">
+                    Все версии
                 </a>
-            </div>
-            <div class="mt-12 flex justify-center gap-6 text-sm text-slate-500">
-                <span><i class="fab fa-python text-blue-400"></i> Python 3.6+</span>
-                <span><i class="fab fa-windows text-green-400"></i> Windows 7/10/11</span>
-                <span><i class="fas fa-box text-orange-400"></i> ~100 MB</span>
             </div>
         </div>
     </header>
@@ -57,78 +56,79 @@
         <section id="features">
             <h2 class="text-3xl font-bold mb-12 text-center">🚀 Возможности программы</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-2xl">
-                    <div class="text-blue-500 text-3xl mb-4"><i class="fas fa-video"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Максимальное качество</h3>
-                    <p class="text-slate-400">Автоматическая загрузка видео в наилучшем доступном разрешении MP4.</p>
+                <div class="glass p-8 rounded-2xl feature-card border border-transparent">
+                    <div class="text-blue-500 text-3xl mb-4"><i class="fas fa-list-ul"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Загрузка плейлистов</h3>
+                    <p class="text-slate-400 text-sm">Вставляйте ссылку на плейлист в то же поле, что и для одиночных видео. Программа обработает всё автоматически.</p>
                 </div>
-                <div class="glass p-8 rounded-2xl">
-                    <div class="text-purple-500 text-3xl mb-4"><i class="fas fa-music"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Конвертация в MP3</h3>
-                    <p class="text-slate-400">Извлекайте аудиодорожки в высоком качестве (192 kbps) одним нажатием.</p>
+                <div class="glass p-8 rounded-2xl feature-card border border-transparent">
+                    <div class="text-purple-500 text-3xl mb-4"><i class="fas fa-file-audio"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Мультиформатность</h3>
+                    <p class="text-slate-400 text-sm">Поддержка MP3, M4A, OGG и других форматов благодаря встроенному постпроцессору FFmpeg[cite: 2].</p>
                 </div>
-                <div class="glass p-8 rounded-2xl">
-                    <div class="text-green-500 text-3xl mb-4"><i class="fas fa-bolt"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Без зависимостей</h3>
-                    <p class="text-slate-400">Всё включено: Python, yt-dlp и FFmpeg уже внутри EXE-файла.</p>
+                <div class="glass p-8 rounded-2xl feature-card border border-transparent">
+                    <div class="text-green-500 text-3xl mb-4"><i class="fas fa-info-circle"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Подсказки и логи</h3>
+                    <p class="text-slate-400 text-sm">Добавлены всплывающие подсказки к кнопкам и более информативные сообщения об ошибках[cite: 2, 7].</p>
                 </div>
             </div>
         </section>
 
-        <section class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl font-bold mb-6 italic">💻 Системные требования</h2>
+        <section id="tech" class="py-12 bg-slate-800/30 rounded-3xl px-8">
+            <h2 class="text-3xl font-bold mb-8 italic">🛠 Технические характеристики</h2>
+            <div class="grid md:grid-cols-2 gap-10">
                 <div class="space-y-4">
-                    <div class="flex items-start gap-4 leading-tight">
-                        <i class="fas fa-check-circle text-blue-500 mt-1"></i>
-                        <div>
-                            <strong>Минимальные:</strong> Windows 7/8/10 (64-bit), 2 GB RAM, 200 MB HDD.
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4 leading-tight">
-                        <i class="fas fa-star text-yellow-500 mt-1"></i>
-                        <div>
-                            <strong>Рекомендуемые:</strong> Windows 10/11, 4 GB RAM, SSD, Dual-core 2.0 GHz.
-                        </div>
-                    </div>
+                    <h4 class="text-blue-400 font-bold uppercase tracking-widest text-sm">Внутренние компоненты:</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> yt-dlp v2025.09.26 [cite: 2]</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Встроенный FFmpeg 8.0 [cite: 2]</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Автоматическая проверка FFmpeg (check_ffmpeg) </li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Звуковые уведомления (winsound) [cite: 2]</li>
+                    </ul>
                 </div>
-            </div>
-            <div class="glass p-6 rounded-2xl border-l-4 border-blue-500">
-                <h3 class="font-bold mb-2 uppercase text-xs tracking-widest text-blue-400">Содержимое архива</h3>
-                <code class="text-sm text-blue-200 block whitespace-pre">
-📦 YTDownloader_v1.1.3.2
-├── 🚀 YTDownloader.exe
-├── 📖 README.md
-├── ❓ FAQ.md
-└── 📄 LICENSE.txt</code>
-            </div>
-        </section>
-
-        <section id="faq" class="space-y-8">
-            <h2 class="text-3xl font-bold text-center">❓ FAQ и решение проблем</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="p-6 rounded-xl bg-slate-800/50 border border-slate-700">
-                    <h4 class="font-bold text-blue-400 mb-2">Ошибка "FFmpeg не найден"?</h4>
-                    <p class="text-sm text-slate-300">В версии 1.1.3.2 FFmpeg встроен. Если используете старую версию — добавьте путь к bin в PATH.</p>
-                </div>
-                <div class="p-6 rounded-xl bg-slate-800/50 border border-slate-700">
-                    <h4 class="font-bold text-blue-400 mb-2">Где сохраняются файлы?</h4>
-                    <p class="text-sm text-slate-300">В папке, выбранной через "Обзор". По умолчанию — папка с программой.</p>
+                <div class="glass p-6 rounded-xl">
+                    <h4 class="text-blue-400 font-bold mb-4 uppercase text-sm">Особенности сборки:</h4>
+                    <p class="text-sm text-slate-300 mb-4">
+                        Большой размер EXE-файла обусловлен включением всех зависимостей для работы "из коробки" на любом Windows ПК без установки Python или FFmpeg.
+                    </p>
+                    <div class="p-3 bg-blue-500/10 rounded border border-blue-500/20 text-xs font-mono text-blue-300">
+                        Bootstrap: bootstrap_paths() & resource_path() [cite: 2]
+                    </div>
                 </div>
             </div>
         </section>
 
-        <footer class="border-t border-slate-800 pt-12 text-center">
-            <div class="mb-6">
-                <p class="text-sm text-slate-500 uppercase tracking-tighter mb-2">Лицензия</p>
-                <p class="font-semibold text-slate-300">Business Source License 1.1 (BSL 1.1)</p>
-                <p class="text-xs text-slate-500 mt-1">Личное использование разрешено. Код станет Open Source (Apache 2.0) в 2030 году.</p>
+        <section id="install" class="max-w-3xl mx-auto">
+            <div class="border-l-4 border-yellow-500 bg-yellow-500/10 p-8 rounded-r-2xl">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3 text-yellow-500">
+                    <i class="fas fa-exclamation-triangle"></i> Важное при первом запуске
+                </h2>
+                <p class="mb-4 text-slate-300">
+                    Приложение не имеет цифровой подписи, поэтому Windows может выдать предупреждение.
+                </p>
+                <ol class="list-decimal list-inside space-y-2 font-semibold text-white">
+                    <li>Нажмите ссылку <span class="underline">"Подробнее"</span> в окне предупреждения.</li>
+                    <li>Выберите кнопку <span class="bg-slate-700 px-2 py-1 rounded">"Выполнить в любом случае"</span>.</li>
+                </ol>
+                <div class="mt-6 p-4 bg-slate-900 rounded border border-slate-700 text-sm">
+                    <p class="text-blue-400 mb-2 font-bold">Если на видео нет звука:</p>
+                    <p class="text-slate-400 italic">Доустановите <a href="https://av1-video-extension.ru.uptodown.com/windows/download" class="text-blue-500 underline">AV1 Video Extension</a>.</p>
+                </div>
             </div>
-            <div class="flex justify-center gap-6 mb-8">
-                <a href="https://t.me/tayniearhiv" class="text-2xl hover:text-blue-400 transition"><i class="fab fa-telegram"></i></a>
-                <a href="https://sourceforge.net/projects/ytdowloader/" class="text-2xl hover:text-blue-400 transition"><i class="fas fa-code-branch"></i></a>
+        </section>
+
+        <footer class="text-center pt-20 border-t border-slate-800">
+            <h3 class="text-xl font-bold mb-6">Остались вопросы или нашли ошибку?</h3>
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <a href="https://t.me/Secret_Archives_Team" class="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-full transition">
+                    <i class="fab fa-telegram"></i> Написать разработчикам 
+                </a>
+                <a href="https://t.me/tayniearhiv" class="flex items-center gap-2 border border-slate-700 hover:bg-slate-800 px-6 py-3 rounded-full transition">
+                    <i class="fas fa-lightbulb text-yellow-500"></i> Предложения 
+                </a>
             </div>
-            <p class="text-sm text-slate-600">© 2025 Secret Archives. Все права защищены. Сделано с ❤️</p>
+            <p class="text-xs text-slate-500 mb-4 italic uppercase tracking-widest">Powered by Secret Archives Team</p>
+            <p class="text-sm text-slate-600">© 2026 Secret Archives. Версия v1.1.4.3 (Ветка 1.1.X.X ). Все права защищены.</p>
         </footer>
 
     </main>
